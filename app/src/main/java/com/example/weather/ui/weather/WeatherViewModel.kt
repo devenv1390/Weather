@@ -1,12 +1,12 @@
 package com.example.weather.ui.weather
 
 import androidx.lifecycle.*
-import com.example.weather.logic.model.Location
 import com.example.weather.logic.Repository
+import com.example.weather.logic.model.qky_Location
 
 class WeatherViewModel : ViewModel() {
 
-    private val locationLiveData = MutableLiveData<Location>()
+    private val locationLiveData = MutableLiveData<qky_Location>()
 
     var locationLng = ""
 
@@ -19,7 +19,7 @@ class WeatherViewModel : ViewModel() {
     }
 
     fun refreshWeather(lng: String, lat: String) {
-        locationLiveData.value = Location(lng, lat)
+        locationLiveData.value = qky_Location(lng, lat)
     }
 
 }
